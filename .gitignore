@@ -1,0 +1,62 @@
+*.py[cod]
+.DS_Store
+!.babelrc
+!.circleci
+!.codeclimate.yml
+!.coveragerc
+!.dockerignore
+!.eslintrc.json
+!.flowconfig
+!.github
+!.gitignore
+!.gqlconfig
+!.npmrc
+!.nvmrc
+!.plop
+!.pylintrc
+!.testcafe
+!.travis*
+!.tx
+!.aws
+*.css
+*.log
+*.pot
+*.pyc
+local_settings.py
+local.py
+__pycache__/
+build/
+coverage/
+dist/
+*\.egg*
+# data
+/media/
+/node_modules/
+/static/
+/src/
+
+# Exported results file
+django-queries-results.html
+
+env
+local.env
+
+/tmp/celerybeat.pid
+/tmp/celerybeat-schedule
+
+### VisualStudioCode ###
+.vscode/**/*
+*.code-workspace
+!.vscode/launch.json
+
+### idea
+.idea/
+
+shopraha_models.png
+latest.sql
+.envrc
+.coverage*
+shopraha_logs.txt
+
+### report
+report.html
