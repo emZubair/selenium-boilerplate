@@ -1,2 +1,0 @@
-selenium==4.12.0
-pytest-html==4.0.2
