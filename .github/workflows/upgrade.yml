@@ -1,8 +1,8 @@
-name: Auto update rust dependencies
+name: Auto update Python dependencies
 on:
   schedule:
     # runs daily at 04:05 am
-    - cron: '31 9 * * *'
+    - cron: '37 9 * * *'
   workflow_dispatch:
 
 jobs:
