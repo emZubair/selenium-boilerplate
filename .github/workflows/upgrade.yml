@@ -18,7 +18,7 @@ jobs:
         python-version: '3.8'
 
     - name: Run auto dependency update
-      uses: emZubair/dependencies-autoupdate@v1.1
+      uses: emZubair/dependencies-autoupdate@v1.1.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         pr-branch: "staging"
