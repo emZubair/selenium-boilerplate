@@ -23,5 +23,5 @@ jobs:
       uses: emZubair/dependencies-autoupdate@v1.1.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        pr-branch: "staging"
+        pr-branch: "slave"
         update-command: "'make update'"
