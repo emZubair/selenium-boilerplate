@@ -29,5 +29,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
     - uses: fastify/github-action-merge-dependabot@v2.1.1
-    with:
+      with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
