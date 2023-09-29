@@ -1,4 +1,4 @@
-name: Auto update Python dependencies part 2
+name: Update Requirements
 on:
   schedule:
     # runs daily at 04:05 am
@@ -24,10 +24,10 @@ jobs:
       with:
         python-version: '3.11'
     - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+      uses: ad-m/github-push-action@main
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
     - uses: fastify/github-action-merge-dependabot@v2.1.1
-        with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+    with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
