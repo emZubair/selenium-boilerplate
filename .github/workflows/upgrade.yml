@@ -2,9 +2,23 @@ name: Auto update rust dependencies
 on:
   schedule:
     # runs daily at 04:05 am
-    - cron: '5 11 * * *'
+    - cron: '31 9 * * *'
   workflow_dispatch:
 
 jobs:
-  update_requirements:
-    uses: emZubair/selenium-boilerplate.git/.github/workflows/compile-python-requirements.yaml@staging
+  auto-update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the head commit of the branch
+      uses: actions/checkout@v3
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+
+    - name: Run auto dependency update
+      uses: romoh/dependencies-autoupdate@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        update-command: "'make update'"
