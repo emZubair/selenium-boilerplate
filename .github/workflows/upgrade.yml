@@ -2,7 +2,7 @@ name: Auto update Python dependencies
 on:
   schedule:
     # runs daily at 04:05 am
-    - cron: '37 9 * * *'
+    - cron: '50 9 * * *'
   workflow_dispatch:
 
 jobs:
