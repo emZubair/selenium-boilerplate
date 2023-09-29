@@ -1,8 +1,8 @@
 name: Auto update Python dependencies
 on:
   schedule:
-    # runs daily at 04:05 am
-    - cron: '5 4 * * *'
+    # runs monthly At 00:01 on day-of-month 1
+    - cron: '1 0 1 * *'
   workflow_dispatch:
 
 jobs:
@@ -12,15 +12,14 @@ jobs:
     steps:
     - name: Checkout the head commit of the branch
       uses: actions/checkout@v4
-      with:
-        ref: staging
 
     - uses: actions/setup-python@v4
       with:
         python-version: '3.8'
 
     - name: Run auto dependency update
-      uses: emZubair/dependencies-autoupdate@v1
+      uses: emZubair/dependencies-autoupdate@v1.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        pr-branch: "staging"
         update-command: "'make update'"
