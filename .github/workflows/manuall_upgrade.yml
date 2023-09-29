@@ -12,9 +12,6 @@ jobs:
     steps:
     - name: Checkout the head commit of the branch
       uses: actions/checkout@v3
-      with:
-        persist-credentials: false
-        fetch-depth: 0
     - run: |
         git config user.name github-actions[bot]
         git config user.email github-actions[bot]@users.noreply.github.com
