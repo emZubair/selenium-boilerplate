@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout the head commit of the branch
       uses: actions/checkout@v4
+      with:
+        ref: staging
 
     - uses: actions/setup-python@v4
       with:
