@@ -17,11 +17,11 @@ jobs:
 
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.11'
 
     - name: Run auto dependency update
       uses: emZubair/dependencies-autoupdate@v1.2.2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        pr-branch: "main"
+        pr-branch: main
         update-command: "'make update'"
