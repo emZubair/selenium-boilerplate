@@ -17,3 +17,6 @@ diff-run-%:
 sort: diff-run-isort ## Sort the imports on diff files
 lint: diff-run-pylint ## run pylint on diff files
 format: diff-run-black ## run black on diff files
+
+requirements:
+	pip install -r requirements/requirements.txt
